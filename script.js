@@ -5,7 +5,7 @@ inputs.forEach(function (input) {
     if (input.getAttribute('type')!== 'submit' && input.getAttribute('type')!=='hidden'){
         console.log(input)
         if(this.value !=''){
-            let = document.querySelectorAll('label[for="' + input.id + '"]')
+            let label = document.querySelectorAll('label[for="' + input.id + '"]')
             label.classList.add('focused')
         }
         addEventListener('focusIn', focusInInputHandler, false)

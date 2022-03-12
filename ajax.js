@@ -2,10 +2,6 @@ $(document).ready(function() {
 $('form').sumbit(function(element){
     element.preventDefalt();
 
-    if(!(this).valid()){
-        return;
-    }
-
     $.ajax({
         type: "POST",
         url: "mailer/smart.php",
@@ -15,7 +11,7 @@ $('form').sumbit(function(element){
 
         $("form").trigger('reset')
     });
-    
+
 });
 
 });
